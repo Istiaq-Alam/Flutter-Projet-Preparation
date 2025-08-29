@@ -7,7 +7,10 @@ The script will:
 * Install essential **SDK components**
 * Accept **licenses**
 * Install missing Linux dependencies (CMake, Ninja, GTK)
-* Save all outputs to a log file (`setup_log.txt`)
+* Detect if Android Studio Flatpak is installed
+* Run flutter config `--android-studio-dir=...` with the correct path
+* Confirm detection in the log
+* * Save all outputs to a log file (`setup_log.txt`)
 
 Here’s the script named `Flutter_Setup.sh`
 
