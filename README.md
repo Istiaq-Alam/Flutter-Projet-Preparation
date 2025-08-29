@@ -13,10 +13,10 @@ Here’s the script named `Flutter_Setup.sh`
 
 ## 🔧 Usage:
 
-1. Save as `setup_flutter.sh`
+1. Save as `Flutter_Setup.sh`
 
    ```bash
-   nano setup_flutter.sh
+   nano Flutter_Setup.sh
    ```
 
    (Paste the script, then save)
@@ -24,13 +24,13 @@ Here’s the script named `Flutter_Setup.sh`
 2. Make executable:
 
    ```bash
-   chmod +x setup_flutter.sh
+   chmod +x Flutter_Setup.sh
    ```
 
 3. Run:
 
    ```bash
-   ./setup_flutter.sh
+   ./Flutter_Setup.sh
    ```
 
 4. Check log:
