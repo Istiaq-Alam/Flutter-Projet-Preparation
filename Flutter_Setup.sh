@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ===============================
-# Flutter + Android SDK Setup Script
+# Flutter + Android SDK Setup Script (with Flatpak Android Studio detection)
 # Works for Kali Linux / Debian-based systems
 # Author: Istiaq Alam
 # ===============================
@@ -69,7 +69,20 @@ sudo apt update -y >> $LOG_FILE 2>&1
 sudo apt install -y cmake ninja-build libgtk-3-dev unzip wget >> $LOG_FILE 2>&1
 
 # -----------------------------------
-# Step 6: Final Check
+# Step 6: Detect Android Studio Flatpak
+# -----------------------------------
+echo "Checking for Android Studio Flatpak..." | tee -a $LOG_FILE
+if flatpak list | grep -q "com.google.AndroidStudio"; then
+  AS_PATH="$HOME/.var/app/com.google.AndroidStudio"
+  echo "Android Studio Flatpak found at $AS_PATH" | tee -a $LOG_FILE
+  flutter config --android-studio-dir="$AS_PATH" >> $LOG_FILE 2>&1
+else
+  echo "Android Studio Flatpak not found. If installed manually, set path with:" | tee -a $LOG_FILE
+  echo "flutter config --android-studio-dir=/path/to/android-studio" | tee -a $LOG_FILE
+fi
+
+# -----------------------------------
+# Step 7: Final Check
 # -----------------------------------
 echo "Running flutter doctor..." | tee -a $LOG_FILE
 flutter doctor -v | tee -a $LOG_FILE
