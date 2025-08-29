@@ -49,4 +49,10 @@ Here’s the script named `Flutter_Setup.sh`
 
 ---
 
+⚠️ Also This will **link Flatpak Android Studio** to Flutter if installed.
+If you later install the **tar.gz version** of Android Studio (recommended), you can re-run:
+
+```bash
+flutter config --android-studio-dir=/opt/android-studio
+```
 
