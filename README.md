@@ -10,7 +10,7 @@ The script will:
 * Detect if Android Studio Flatpak is installed
 * Run flutter config `--android-studio-dir=...` with the correct path
 * Confirm detection in the log
-* Save all outputs to a log file (`setup_log.txt`)
+* Save all outputs to a log file (`flutter_android_setup_log.txt`)
 
 Here’s the script named `Flutter_Setup.sh`
 
