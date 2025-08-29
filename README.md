@@ -1,6 +1,8 @@
 # Automate **Flutter + Android Studio SDK setup** in Kali Linux using a shell script.
 ---
+
 The script will:
+
 * Add **Flutter** to `PATH`
 * Install **Android SDK command-line tools**
 * Set **ANDROID\_SDK\_ROOT**
