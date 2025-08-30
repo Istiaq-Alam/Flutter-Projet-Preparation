@@ -10,6 +10,7 @@ home : Scaffold(
 	),
 	),
 		body: Column(
+		
 			children: [
 			 Container(height:300, color: Colors.purple,),
 			 Container(height:300, color: Colors.purple[200],),
